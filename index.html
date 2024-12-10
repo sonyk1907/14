@@ -1,4 +1,6 @@
+
 <head>
+  <link rel="stylesheet" href="https://github.com/sonyk1907/14/blob/main/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </head>
 <div class="main" id = "main">
@@ -337,7 +339,25 @@
             srkarthik.designscape@gmail.com
           </div>
         </div>
+<script>
+  function captureImage() {
+            const element = document.getElementById('main');
+            html2canvas(element, {
+                useCORS: true,
+                scale: 2
+            }).then((canvas) => {
+                const image = canvas.toDataURL('image/pdf');
+                const link = document.createElement('a');
+                link.href = image;
+                link.download = 'screenshot.png';
+                link.click();
+            });
+        }
+</script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xdomain/0.8.2/xdomain.min.js"></script>
       </div>
     </div>
   </div>
